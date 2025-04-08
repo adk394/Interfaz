@@ -1,0 +1,29 @@
+---
+import estudisData from '../../data/cv.json';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths(){
+    //Mapejar els estudis per generar els paràmetres id per cada ruta dinàmica
+    const paths = estudisData.education.map(estudi => ({
+        params:{ id: estudi.id} //El id de cada estudi serà usat per la ruta dinàmica
+// Exemple de la sortida seria:   [{ "params": { "id": "1" } },{ "params": { "id": "2" } }]
+    }));
+    return paths;
+}
+
+//Obtenir la ID de la ruta dinàmica
+const {id} = Astro.params;
+
+//Busquem l'estudi per id
+const estudi = estudisData.education.find(estudi => estudi.id === id);
+
+//Si no trobes l'estudi, llança error
+if(!estudi) {
+    throw new Error('Estudi no trobat');
+}
+---
+<Layout>
+    <h1>{estudi.degree}</h1>
+    <h2>{estudi.institution}</h2>
+    <p>{estudi.year}</p>
+</Layout>

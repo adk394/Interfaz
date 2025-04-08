@@ -1,0 +1,19 @@
+---
+interface Props {
+  project: {
+    name: string;
+    description: string;
+    image: string;
+    slug: string;
+  };
+}
+
+const { project } = Astro.props;
+---
+
+<div class="bg-gray-200 p-4 rounded-lg shadow-lg">
+    <h1 class="text-xl font-bold">{project.name}</h1>
+    <h2 class="text-gray-700">{project.description}</h2>
+    <img src={project.image} width="300px" height="200px" class="mt-2 rounded" />
+    <a href={`/projects/${project.slug}`} class="text-pink-500 underline mt-2 block">Ver más</a>
+</div>

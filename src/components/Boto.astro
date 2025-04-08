@@ -1,0 +1,28 @@
+
+---
+interface Props {
+    boto?: GamepadButton | string;
+}
+
+const { boto = "Boto per defecte" } = Astro.props;
+---
+
+<button>{boto}</button>
+
+<style>
+    button {
+        border-radius: 20px;
+        background-color: pink;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 300px;
+        height: 50px;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: lightcoral;
+    }
+</style>

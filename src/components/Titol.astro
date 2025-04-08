@@ -1,0 +1,20 @@
+
+---
+interface Props{
+    title: string;
+    descripcio?:string; //Prop opcional
+}
+
+const {title="titol x defecte", descripcio="descripció buida"} = Astro.props;
+---
+
+<div>
+    <div class="w-screen ml-20 h-20 items-center flex">
+        <h1 class="black size font-extrabold text-3xl">{title}</h1>
+    </div>
+    <div class="w-screen ml-20 h-10 items-center flex">
+      <p>{descripcio}</p>
+    </div>
+    <img src="" alt="">
+</div>
+

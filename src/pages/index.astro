@@ -1,0 +1,26 @@
+---
+import Nav from '../components/Nav.astro';
+import Pie from '../components/Pie.astro';
+import Boto from '../components/Boto.astro';
+import Titol from '../components/Titol.astro';
+import Layout from '../layouts/Layout.astro';
+import Projecto from '../components/Projecto.astro';
+import projectsData from '../data/cv.json';
+
+
+const projects = projectsData.projects;
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+    <Nav />
+    <Titol title="PAGINA DE IZAN ©" descripcio='  Soy Izan Aranda y este es mi portfolio, incluye el cv de "estudios" y de "proyectos"'/>
+    <div class="flex gap-10 justify-center ml-10 mr-10">
+        {projects.map(project => (
+            <Projecto project={project} />
+        ))}
+    </div>
+    <Pie />
+</Layout>
