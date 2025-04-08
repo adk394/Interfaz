@@ -3,12 +3,12 @@
     "title": "Desenvolupador Web Full Stack",
     "profile_summary": "Desenvolupador web apassionat per crear aplicacions web escalables i amb una experiència pràctica sòlida en el desenvolupament frontend i backend. Amb més de 5 anys d'experiència en tecnologies modernes com React, Node.js i Vue.js, em dedico a dissenyar i implementar solucions que millorin l'experiència de l'usuari i optimitzin el rendiment de les aplicacions. La meva especialització en arquitectures d'aplicacions escalables i el treball amb equips multidisciplinaris m'ha permès afrontar reptes tècnics i crear productes amb un gran impacte. Em motiva el desenvolupament d'interfícies intuïtives que permetin als usuaris interactuar de manera fàcil i eficient amb les aplicacions.",
     "contact": {
-        "email": "alex.ferrer@example.com",
-        "phone": "+34 555 123 456",
-        "location": "Gavà, Catalunya",
-        "website": "https://alexferrer.dev",
-        "linkedin": "https://www.linkedin.com/in/alexferrer",
-        "github": "https://github.com/alexferrer"
+        "email": "izanarandav@gmail.com",
+        "phone": "+34 674 123 456",
+        "location": "Vilanova i la Geltru, Catalunya",
+        "website": "https://izanaranda.dev",
+        "linkedin": "https://www.linkedin.com/in/izanaranda",
+        "github": "https://github.com/adk931"
     },
     "skills": [
         "JavaScript", "TypeScript", "React", "Astro", "Vue.js",
@@ -54,22 +54,24 @@
     ],
     "education": [{
             "degree": "FP de Desenvolupament d'Aplicacions Web",
-            "institution": "FP Núria",
-            "year": "2012 - 2014",
+            "institution": "FP Nuria",
+            "year": "2024 - 2025*",
             "id":"1"
         },
         {
-            "degree": "Grau en Enginyeria Informàtica",
-            "institution": "Universitat Pompeu Fabra",
-            "year": "2012 - 2014",
+            "degree": "Grau en Enginyeria Informatica",
+            "institution": "Institut Joaquim Mir",
+            "year": "2017 - 2023",
             "id":"2"
             
         }
     ],
     "languages": [
-        { "language": "Català", "level": "Nadiu" },
+        { "language": "Catala", "level": "Nadiu" },
         { "language": "Espanyol", "level": "Nadiu" },
-        { "language": "Anglès", "level": "Avançat" }
+        { "language": "Angles", "level": "Avancat" },
+        { "language": "Frances", "level": "Basic" }
+
     ],
     "projects": [{
             "name": "TaskManager App",

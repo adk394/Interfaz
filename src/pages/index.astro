@@ -16,11 +16,14 @@ const projects = projectsData.projects;
 
 <Layout>
     <Nav />
-    <Titol title="PAGINA DE IZAN ©" descripcio='  Soy Izan Aranda y este es mi portfolio, incluye el cv de "estudios" y de "proyectos"'/>
-    <div class="flex gap-10 justify-center ml-10 mr-10">
-        {projects.map(project => (
-            <Projecto project={project} />
-        ))}
+    <Titol title="Hola, soy Izan!" descripcio='  Hola, soy Izan Aranada, estudiante de Desarrollo de Aplicaciones Web. Me apasiona la tecnología, el diseño funcional y crear soluciones prácticas que conecten a las personas con lo digital. A lo largo de mi formación, he trabajado en proyectos donde he aplicado HTML, CSS, JavaScript"'/>
+    <div class="flex justify-center items-center">
+        <div class="grid gap-10 justify-center ml-10 mr-10 w-300 grid-cols-2 grid-rows-2">
+            {projects.map(project => (
+                <Projecto project={project} />
+            ))}
+            
+        </div>
     </div>
     <Pie />
 </Layout>

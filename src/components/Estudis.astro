@@ -1,0 +1,24 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  education: {
+    degree: string;
+    institution: string;
+    year: string;
+    id: string;
+  };
+}
+
+const { education } = Astro.props;
+---
+
+<div class="bg-white p-8 rounded-2xl shadow-2xl transform transition-all hover:scale-105 hover:shadow-2xl duration-300 max-w-xs mx-auto ml-50 w-200">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX///8DP3gAPXfs8fYgToEdTIAALG2Ln7gAJmnI1ODCzNgAOnUAMHAANnMAJmoANHP2+fu7xtUUR302X4wAGmTX3udwi6yInbckUoTx9fh8j6zj6e89V4R2iqggQngAAF1DXYg3VIIAH2aXp70AAFaptsgtSnyBk67R2+QABl/l6/GersMxUIFWdJsxWYlqhKWwYSoUAAAEeUlEQVR4nO2d63aiMBRGk8ggNkFARWsv01pra1vbvv/bjb0jBqQh0x7O+vZv15FtPjgqIRECAAAAAAAAAAAAAAAAAACsSHv0SP3pzbPpOKDHeJrNvfils5GJtaKHjs1o5mEg18dGSaooc7xuK5gl+rc1atFJ1nIEE7oD+IZKWo1iGtAewRd00OZc7JvfPv4GmL674HxEPaMvqJF708i6MITbQXS/2Ezj3z74RsRTV8F0TP8684Ieu15rekEXTsPtiRj0XA3/wJAGMIQhfWAIQ/rAEIb0gSEM6QNDGNIHhjCkDwxhSB8YwpA+MIQhfWAIQ/rA0LuhGUYFaueM6TDaYeg0NeKHDZXuHxXITnT1dId4szrapa9d3vJnDU1eqnJ6llS8VG/2ZxjkDqP4s4bJ+V6Z+U3FlI7QNg/mvOrzoGIYWqZgDYb210YDy5v2ww4ailv7UTMyFPaccjJcT7gb2nPKylD8tZTiZZhfcDcUtxF3Q0tOuRnmd9wNRb/81YadodiU+j4/w7zU9/kZlnPK0FCc7eSUo2G+M4gcDcWyqMjSUFwW/rXhaZgXBHgaFnPK1LCQU66GXznlaviVU7aGn32fr2EecTcUy4i7oVho7oanV9wN366nrA1fc8rb8HTC3VAsr7gbbnPK3fB+wsjwyLrAysM1I8ONtf7iiI3h4PrBVn/NyDCa3Dd9064a6gV3QzlccjeUk1Puhk1z2l1DGTXLaYcN5VWjnHbZsFlOu2zYLKedNpRRee4pO0N9xt2wSU47bqjCgzntuKGML7kbHv5+2nlDeSin3Tc8lNPuGx7KKQNDOazNKQfD+r7PwVAOa+e+cTCUk5qc8jDU9v9PGRnW5ZSJobyrzCkXQ/WXu6GMbrkbyouKnPIxrMopH0MZ2nPKyFBOrPdNORnqG+6G9pyyMpRDy4188oaW5/GFyCqOWt/s771B/nn8/TUVhEgXVbtIJGfluzVr8msqlNfF2LLa1KyMoU+ynXUxYvrrYpTXNomisG4fEGU6t7bJLwBDGNIHhjCkDwxhSB8YwpA+MIQhfWAIQ/rA8IcN/0dJUobKZRndQzUpGarR2v9O2KQMzYN48L4VNiVD/ZSK9Mn3TtGEDNXrHuFZ7RLfLmXpGMaPr3UfPW9oTshQv92XytkaJifvhU++f4+wDjKGavRxP3Tut2OQMTRfjzv77RhUDPVTobTXjkHFMCxOSxh8fz5CNS0MA4+G753iA58dw90wHfvLkgp3n8i/D/19enq8v4tEQ6b+PuhkVqo989cx4qmr4Pb7la+DUMle8cTbIBrbPhnN8Ne3wtVe8ZWvi81Xn3Wg72kQdzrFB746hmm8JI6FNPBzFEPbRMt1xdYl30QHzteZ16PwcrbEz9bizz4uZCqxTlNtTpZ4GMXE3q96Hs4BnbhfZt5ZH7f+wWqqnsdbtlVU5rjlCL6QzkYm1sqd6hNle5q3qRub0azVOfjJPJuOA3dkdY4y2aLueJq1aBNl0l4Lauq2Ketn+AAAAAAAAAAAAAAAAAAAQIZ/nBmeglnxKkYAAAAASUVORK5CYII=" alt="image" class="w-full h-48 object-cover rounded-lg mb-6" />
+  
+  <h2 class="text-3xl font-extrabold text-gray-800 mb-2 text-center">{education.degree}</h2>
+  <h3 class="text-xl text-gray-600 mb-3 text-center">{education.institution}</h3>
+  <p class="text-sm text-gray-500 text-center mb-6">{education.year}</p>
+  
+  <a href={`/education/${education.id}`} class="block text-center text-pink-600 font-semibold text-lg mt-4 hover:text-pink-700 transition-colors">VER DETALLS</a>
+</div>

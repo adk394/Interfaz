@@ -1,29 +1,26 @@
 ---
-import estudisData from '../../data/cv.json';
+import educationData from '../../data/cv.json';
 import Layout from '../../layouts/Layout.astro';
 
-export async function getStaticPaths(){
-    //Mapejar els estudis per generar els paràmetres id per cada ruta dinàmica
-    const paths = estudisData.education.map(estudi => ({
-        params:{ id: estudi.id} //El id de cada estudi serà usat per la ruta dinàmica
-// Exemple de la sortida seria:   [{ "params": { "id": "1" } },{ "params": { "id": "2" } }]
-    }));
-    return paths;
+export async function getStaticPaths() {
+  const paths = educationData.education.map(estudi => ({
+    params: { id: estudi.id }
+  }));
+  return paths;
 }
 
-//Obtenir la ID de la ruta dinàmica
-const {id} = Astro.params;
+const { id } = Astro.params;
+const education = educationData.education.find(estudi => estudi.id === id);
 
-//Busquem l'estudi per id
-const estudi = estudisData.education.find(estudi => estudi.id === id);
-
-//Si no trobes l'estudi, llança error
-if(!estudi) {
-    throw new Error('Estudi no trobat');
+if (!education) {
+  throw new Error('Estudi no trobat');
 }
 ---
+
 <Layout>
-    <h1>{estudi.degree}</h1>
-    <h2>{estudi.institution}</h2>
-    <p>{estudi.year}</p>
+  <section class="max-w-4xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md text-gray-900">
+    <h1 class="text-3xl font-bold mb-2">{education.degree}</h1>
+    <h2 class="text-xl font-semibold mb-4">{education.institution}</h2>
+    <p class="text-lg mb-6">{education.year}</p>
+  </section>
 </Layout>
