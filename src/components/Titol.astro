@@ -1,20 +1,18 @@
-
 ---
-interface Props{
-    title: string;
-    descripcio?:string; //Prop opcional
+interface Props {
+  title: string;
+  descripcio?: string; //Prop opcional
 }
 
-const {title="titol x defecte", descripcio="descripció buida"} = Astro.props;
+const { title = "titol x defecte", descripcio = "descripció buida" } = Astro.props;
 ---
 
-<div class="ml-120 justify-center flex mt-20 flex-col">
-    <div class="w-3/4  h-20 flex">
-        <h1 class="black size font-extrabold text-4xl">{title}</h1>
-    </div>
-    <div class="w-2/4 h-10  flex">
-      <p>{descripcio}</p>
-    </div>
-    <img src="" alt="">
+<div class="flex flex-col items-center mt-20 px-4 text-center max-w-4xl mx-auto">
+  <div class="mb-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">{title}</h1>
+  </div>
+  <div class="mb-8">
+    <p class="text-base md:text-lg text-gray-600">{descripcio}</p>
+  </div>
+  <img src="../data/fadding-cat.gif" class="w-full max-w-md rounded-lg shadow-md" />
 </div>
-

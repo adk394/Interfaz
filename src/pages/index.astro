@@ -6,24 +6,31 @@ import Titol from '../components/Titol.astro';
 import Layout from '../layouts/Layout.astro';
 import Projecto from '../components/Projecto.astro';
 import projectsData from '../data/cv.json';
-
+import "../styles/global.css";
 
 const projects = projectsData.projects;
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-    <Nav />
-    <Titol title="Hola, soy Izan!" descripcio='  Hola, soy Izan Aranada, estudiante de Desarrollo de Aplicaciones Web. Me apasiona la tecnología, el diseño funcional y crear soluciones prácticas que conecten a las personas con lo digital. A lo largo de mi formación, he trabajado en proyectos donde he aplicado HTML, CSS, JavaScript"'/>
-    <div class="flex justify-center items-center">
-        <div class="grid gap-10 justify-center ml-10 mr-10 w-300 grid-cols-2 grid-rows-2">
-            {projects.map(project => (
-                <Projecto project={project} />
-            ))}
-            
-        </div>
+  <Nav />
+
+  <section class="px-6 py-12 max-w-6xl mx-auto">
+    <Titol
+      title="Hola, soy Izan!"
+      descripcio="Hola, soy Izan Aranada, estudiante de Desarrollo de Aplicaciones Web. Me apasiona la tecnología, el diseño funcional y crear soluciones prácticas que conecten a las personas con lo digital. A lo largo de mi formación, he trabajado en proyectos donde he aplicado HTML, CSS, JavaScript."
+    />
+    
+    <div class="mt-16">
+      <h2 class="text-3xl font-bold text-center mb-10">Mis Proyectos</h2>
+      
+      <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        {projects.map(project => (
+          <Projecto project={project} />
+        ))}
+      </div>
     </div>
-    <Pie />
+  </section>
+
+  <Pie />
 </Layout>
+

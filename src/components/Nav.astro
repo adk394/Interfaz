@@ -3,12 +3,20 @@ import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
 import "../styles/global.css";
 ---
-<div class="flex justify-center items-center ">
-	<div class="w-2/5 mt-5 h-20 bg-gray-200 text-black items-center flex gap-10">
-		<a class="text-2xl ml-15" href="http://localhost:4321/"><b>IA</b></a>
-		<a class="text-2xl ml-60" href="http://localhost:4321/estudis/info">/Information</a>
-		<a class="text-2xl " href="http://localhost:4321/contact/contacto">/Contact</a>
-		<a class="text-2xl " href="http://localhost:4321">/Index</a>
 
-	</div>
-</div>
+<nav class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 shadow-xl">
+  <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+    <a href="/treball/index.astro" class="text-4xl font-extrabold text-white tracking-wide hover:scale-105 transition-transform duration-300">
+      IA
+    </a>
+    
+    <div class="space-x-12 text-white text-2xl font-medium hidden md:flex">
+      <a href="/estudis/info" class="hover:text-yellow-300 transition-colors duration-200 hover:underline">
+        /Information
+      </a>
+      <a href="/contact/contacto" class="hover:text-yellow-300 transition-colors duration-200 hover:underline">
+        /Contact
+      </a>
+    </div>
+  </div>
+</nav>

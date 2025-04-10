@@ -1,10 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
 ---
 
 <Layout>
-	<h1>ERROR 404</h1>
+  <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-indigo-600 to-purple-700 text-white px-6 text-center">
+    
+    <h1 class="text-7xl font-extrabold mb-6 drop-shadow-lg">404</h1>
+    <h2 class="text-3xl font-semibold mb-4">¡Oops! Página no encontrada</h2>
+    <p class="text-lg text-white/80 max-w-xl mb-8">
+      Parece que la página que buscas no existe o ha sido movida. Pero no te preocupes, puedes volver al inicio o seguir explorando.
+    </p>
+
+    <a 
+      href="/" 
+      class="bg-white text-indigo-700 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-300 hover:text-black transition-all duration-300"
+    >
+      Volver al Inicio
+    </a>
+
+  </section>
 </Layout>
+

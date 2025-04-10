@@ -10,12 +10,24 @@ interface Props {
 
 const { project } = Astro.props;
 ---
-<div class="w-full flex justify-center items-center mt-30 flex-row bg-gray-200 shadow-lg rounded-lg"> 
+
+<div class="w-full flex justify-center items-center mt-20">
+  <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-2xl shadow-2xl p-6 max-w-sm w-full hover:scale-105 transition-transform duration-300">
     
-<div class=" p-4 rounded-lg  w-100">
-    <img src={project.image} width="300px" height="200px" class="mt-2 rounded" /> 
-      <h1 class="text-xl font-bold">{project.name}</h1>
-      <h2 class="text-gray-700">{project.description}</h2>
-      <a href={`/treball/${project.slug}`} class="text-pink-500 mt-2 block">VER</a>
-</div>
+    <img 
+      src={project.image} 
+      alt={project.name} 
+      class="rounded-xl mb-4 w-full h-56 object-cover shadow-md"
+    />
+    
+    <h1 class="text-2xl font-extrabold mb-2">{project.name}</h1>
+    <p class="text-sm text-white/80 mb-4">{project.description}</p>
+    
+    <a 
+      href={`/treball/${project.slug}`} 
+      class="inline-block bg-white text-indigo-700 font-semibold px-5 py-2 rounded-lg hover:bg-yellow-300 hover:text-black transition-colors duration-200"
+    >
+      VER
+    </a>
+  </div>
 </div>
