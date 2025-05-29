@@ -74,6 +74,22 @@
 
     ],
     "projects": [{
+<<<<<<< HEAD
+=======
+        
+            "name": "ThunderFuel",
+            "description": "Pagina web ambientada en les nostres bebides energetiques preferides.",
+            "url": "https://https://thunderfuel.netlify.app/",
+            "image": "/src/assets/captura2.png",
+            "slug": "5",
+            "eines": "HTML5: per estructurar correctament el contingut de la pàgina. CSS3: per estilitzar els elements, aplicant gradients, animacions i disseny responsive. Figma: per fer esbossos previs del disseny visual i jerarquia de continguts. Eina de generació d’imatges Midjourney per crear imatges impactants del producte, fons abstractes amb energia visual i escenes publicitàries amb estil modern i futurista. Coolors: per definir una paleta cromàtica que evoqui energia, força i dinamisme.",
+            "repte" : "Repte: També es va treballar en:Mantenir una coherència visual entre totes les imatges generades. Optimitzar els fitxers d’imatge per a web sense perdre qualitat. Aplicar efectes CSS (hover, transicions, animacions) per donar vida als elements sense recórrer a JavaScript. Assegurar una accessibilitat bàsica (text alternatiu a imatges, contrastos adequats, etc.).",
+            "objectiu": "Crear una pàgina web moderna i visualment impactant per promocionar 'ENERGIX', una beguda energètica pensada per a persones actives i creatives. L'objectiu és transmetre energia, velocitat i modernitat, combinant una estètica potent amb una navegació clara i funcional. La web ha estat dissenyada amb HTML i CSS purs, amb un enfocament responsive per adaptar-se a tot tipus de dispositius.",
+            "video" : "/home/adk/Downloads/Interfaz-main/src/assets/Diseño sin título(1).mp4"
+        },
+        {
+        
+>>>>>>> 8968fb7 (Mensaje de commit)
             "name": "TaskManager App",
             "description": "Aplicació de gestió de tasques amb React i Firebase.",
             "url": "https://taskmanager.dev",
