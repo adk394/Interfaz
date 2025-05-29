@@ -74,8 +74,6 @@
 
     ],
     "projects": [{
-<<<<<<< HEAD
-=======
         
             "name": "ThunderFuel",
             "description": "Pagina web ambientada en les nostres bebides energetiques preferides.",
@@ -89,7 +87,6 @@
         },
         {
         
->>>>>>> 8968fb7 (Mensaje de commit)
             "name": "TaskManager App",
             "description": "Aplicació de gestió de tasques amb React i Firebase.",
             "url": "https://taskmanager.dev",
